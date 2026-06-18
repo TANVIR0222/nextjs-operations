@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "migration:generate": "drizzle-kit generate",
-    "migration:migrate": "drizzle-kit migrate"
+    "migration:migrate": "drizzle-kit migrate",
+    "migration:push": "drizzle-kit push",
+    "migration:pull": "drizzle-kit pull"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

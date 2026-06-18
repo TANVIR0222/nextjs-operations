@@ -1,5 +1,7 @@
 "use client";
 
+import todoAdd from "@/actions/todoAction";
+
 export default function Home() {
   // const data = await getData();
 
@@ -9,13 +11,14 @@ export default function Home() {
 
   const handle = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id: 1, text: "asfdsadf", done: true }),
-      });
+      // const res = await fetch("http://localhost:3000/api/user", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ id: 1, text: "asfdsadf", done: true }),
+      // });
+      const res = await todoAdd({ text: "asfdsadf", done: true });
 
       console.log(res);
     } catch (error) {
@@ -26,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <button onClick={handle}>click</button>
+      <button onClick={() => handle()}>click</button>
     </div>
   );
 

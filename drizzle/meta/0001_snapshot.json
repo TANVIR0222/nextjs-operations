@@ -1,9 +1,51 @@
 {
-  "id": "5b3fcd01-b6fe-4710-8ed4-e683a4cf4438",
-  "prevId": "31189f5d-5f21-415a-99de-021cb936ffef",
+  "id": "40381057-fb6b-40cf-8c17-3da9880b9be1",
+  "prevId": "d8fe93bc-28a7-4980-b2d6-8d98d7872009",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.post-table": {
+      "name": "post-table",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "post-table_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "descriptions": {
+          "name": "descriptions",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.todo": {
       "name": "todo",
       "schema": "",

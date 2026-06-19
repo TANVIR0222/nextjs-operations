@@ -1,5 +1,5 @@
 {
-  "id": "517fdf7e-9e28-441e-b334-b7e72a66e18f",
+  "id": "d8fe93bc-28a7-4980-b2d6-8d98d7872009",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -12,7 +12,18 @@
           "name": "id",
           "type": "integer",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "todo_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
         },
         "text": {
           "name": "text",

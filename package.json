@@ -13,6 +13,9 @@
     "pull": "drizzle-kit pull"
   },
   "dependencies": {
+    "studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "@neondatabase/serverless": "^1.1.0",
     "@tanstack/react-form": "^1.33.0",
     "class-variance-authority": "^0.7.1",

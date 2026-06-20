@@ -1,13 +1,13 @@
 import { getAllPost } from "@/actions/post-actions";
-import { BugReportForm } from "@/components/tanstack-form";
+import CalendarEvents from "@/feature/calendar/components/calendar-events";
 
 const page = async () => {
-  const res = await getAllPost();
-  console.log(res);
+  // const res = await getAllPost();
+  // console.log(res);
 
   return (
     <div>
-      <BugReportForm />
+      <CalendarEvents />
     </div>
   );
 };
